@@ -15,8 +15,29 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: build.bat
-  displayName: 'Run build script'
+- script: |
+  npm install -g @angular/cli@7.0.6
+  displayName: 'Install angular cli'
+
+- script: |
+  npm install
+  displayName: 'Install node modules'
+
+- script: |
+  npm run build
+  displayName: 'Build angular'
+
+- script: |
+  npm install -g electron@6.0.4
+  displayName: 'Install electron'
+
+- script: |
+  npm install -g electron-packager@14.0.4
+  displayName: 'Install electron packager'
+
+- script: |
+  npm run build-win32
+  displayName: 'Build win32'
 
 - task: CopyFiles@2
   inputs:
