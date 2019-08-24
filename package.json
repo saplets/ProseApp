@@ -1,6 +1,6 @@
 {
-    "name": "sb-admin-material",
-    "version": "7.0.0",
+    "name": "Prose",
+    "version": "0.0.0",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --progress",
@@ -9,7 +9,9 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "electron":"./node_modules/.bin/electron electron.js"
+        "electron": "electron .",
+        "electron-build": "ng build --prod && electron",
+        "build-win32":"electron-packager . --platform=win32 --overwrite"
     },
     "private": true,
     "dependencies": {
@@ -45,6 +47,7 @@
         "@types/node": "10.12.10",
         "codelyzer": "4.5.0",
         "electron": "^6.0.4",
+        "electron-packager": "^14.0.4",
         "jasmine-core": "3.3.0",
         "jasmine-spec-reporter": "4.2.1",
         "karma": "3.1.1",
