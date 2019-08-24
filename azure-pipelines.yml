@@ -27,7 +27,7 @@ steps:
     echo "Installing electron packager"
     npm install -g electron-packager@14.0.4
     echo "Compiling for win32"
-    ng run build-win32
+    npm run build-win32
   displayName: 'Run build script'
 
 - task: CopyFiles@2
