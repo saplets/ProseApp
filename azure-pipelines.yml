@@ -41,10 +41,10 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: '*'
+    contents: '*/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
     
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
-    artifactName: MyBuildOutputs
+    artifactName: drop
