@@ -10,8 +10,8 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "electron": "electron .",
-        "electron-build": "ng build --prod && electron",
-        "build-win32":"electron-packager . --platform=win32 --overwrite"
+        "electron-build": "ng build --prod && electron .",
+        "build-win32": "electron-packager . --platform=win32 --overwrite"
     },
     "private": true,
     "dependencies": {
@@ -47,6 +47,7 @@
         "@types/node": "10.12.10",
         "codelyzer": "4.5.0",
         "electron": "^6.0.4",
+        "electron-log": "^3.0.7",
         "electron-packager": "^14.0.4",
         "jasmine-core": "3.3.0",
         "jasmine-spec-reporter": "4.2.1",
