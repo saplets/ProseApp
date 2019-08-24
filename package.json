@@ -8,7 +8,8 @@
         "gitbuild": "ng build --prod --base-href /start-javascript/sb-admin-material/master/dist/",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "electron":"./node_modules/.bin/electron electron.js"
     },
     "private": true,
     "dependencies": {
@@ -43,6 +44,7 @@
         "@types/jasminewd2": "2.0.6",
         "@types/node": "10.12.10",
         "codelyzer": "4.5.0",
+        "electron": "^6.0.4",
         "jasmine-core": "3.3.0",
         "jasmine-spec-reporter": "4.2.1",
         "karma": "3.1.1",
