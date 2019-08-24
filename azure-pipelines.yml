@@ -39,9 +39,17 @@ steps:
     npm run build-win32
   displayName: 'Build win32'
 
+- script: |
+    npm run build-win32
+  displayName: 'Build win32'
+
+- powershell: |
+    Compress-Archive -Path .\Prose-win32-x64 -DestinationPath .\Prose-win32-x64.zip
+  displayName: 'Compress win32'
+
 - task: CopyFiles@2
   inputs:
-    contents: '*/**'
+    contents: '*.zip'
     targetFolder: $(Build.ArtifactStagingDirectory)
     
 - task: PublishBuildArtifacts@1
