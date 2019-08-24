@@ -21,4 +21,6 @@ steps:
     ng build --prod
     npm install -g electron@6.0.4
     npm install -g electron-packager@14.0.4
+    ng run build-win32
+
   displayName: 'npm install and build'
